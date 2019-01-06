@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>雪花特效</title>
+</head>
+<style>
+    body {
+        background: black;
+    }
+    .snowDown {
+        animation: snowDown 3s linear infinite normal;
+        -webkit-animation: snowDown 3s linear infinite normal;
+        position: absolute;
+    }
+    @keyframes snowDown {
+        from {
+            opacity: 1;
+            top: 30em;
+        }
+        to {
+            opacity: 0;
+            top: 30em;
+        }
+    }
+</style>
+<body>
+<div class="snowDown"></div>
+</body>
+</html>

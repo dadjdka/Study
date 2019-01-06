@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>缓冲</title>
+</head>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    #box {
+        height: 200px;
+        width: 200px;
+        background-color: rebeccapurple;
+        -webkit-border-radius: 5%;  /*兼容谷歌浏览器*/
+        -moz-border-radius: 5%;     /*兼容火狐浏览器*/
+        border-radius: 5%;
+        position: relative;
+        left: -200px;
+    }
+    #smallbox {
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        left: 200px;
+        top: 75px;
+        background-color: red;
+        -webkit-border-radius: 5%;
+        -moz-border-radius: 5%;
+        border-radius: 50%;
+    }
+</style>
+<body>
+<div id="box">
+    <span id="smallbox"></span>
+</div>
+</body>
+<script>
+    window.onload = function () {
+        var box = document.getElementById('box')
+        box.onmouseover = function () {
+            move(0)      //当鼠标移动到图片上时 位置移动到0
+        }
+        box.onmouseout = function () {
+            move(-200)    //图片初始化后隐藏于边框-200px位置
+        }
+    }
+
+    var timer = null;
+
+    function move(target) {
+        clearInterval(timer)
+        var box = document.getElementById('box')
+        timer = setInterval(function () {
+            var speed = (target - box.offsetLeft) / 20
+            speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed)
+            if (box.offsetLeft == target) {
+                clearInterval(timer)
+            } else {
+                box.style.left = box.offsetLeft + speed + 'px'
+            }
+        }, 30)
+    }
+</script>
+</html>
