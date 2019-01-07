@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>移动显示与隐藏</title>
+</head>
+<style>
+    .imgs {
+        display: none;
+    }
+    .txt {
+        display: none;
+    }
+    .heard-one {
+        width: 200px;
+        height: 200px;
+    }
+    .heard {
+        display: flex;
+    }
+</style>
+<body>
+<div class="heard">
+    <div class="heard-one" onmouseover="change('i')">点</div>
+    <div class="heard-two" onmouseover="change('t')">点</div>
+</div>
+<div class="last">
+    <div class="imgs" id="i">
+        <img src="jiqimao.jpg">
+    </div>
+    <div class="txt" id="t">
+        <span>圣诞节安顿好看</span>
+    </div>
+</div>
+</body>
+<script>
+    function change(name) {
+        if (name == 'i') {
+            i.style.display = 'block'
+            t.style.display = 'none'
+        }else if (name == 't') {
+            i.style.display = 'none'
+            t.style.display = 'block'
+        }else {
+            i.style.display = 'none'
+            t.style.display = 'none'
+        }
+    }
+</script>
+</html>
