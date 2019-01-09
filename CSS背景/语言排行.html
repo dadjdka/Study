@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>语言排行</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        background: url("../jiqimao.jpg");
+    }
+    div {
+        width: 1139px;
+        margin: 50px auto;
+    }
+    li {
+        width: 205px;
+        height: 120px;
+        margin: 40px 10px;
+        background: rgba(0 , 0, 0, 0.5);
+        list-style: none;
+        float: left;
+        position: relative;
+        z-index: 1;
+        /*opacity: 0.1;*/
+    }
+    li:nth-of-type(9n+6) {
+        margin-left: 120px;
+    }
+    li:before,li:after {
+        content: "";
+        width: 205px;
+        height: 120px;
+        background: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        /*margin: 40px 10px;*/
+    }
+    li:before {
+        transform: rotate(60deg);
+        z-index: 1;
+    }
+    li:after {
+        transform: rotate(-60deg);
+        z-index: 1;
+    }
+    li p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        line-height: 90px;
+        color: white;
+        font-size: 2em;
+        display: block;
+        height: 3em;
+        width: 3em;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        margin: auto;
+        text-align: center;
+        border-radius: 50%;
+        border: solid 5px white;
+        transition: 1s;
+        z-index: 5;
+    }
+    li:nth-of-type(1) p {
+        background: #2BB121;
+    }
+    li:nth-of-type(2) p {
+        background: #0864C1;
+    }
+    li:nth-of-type(3) p {
+        background: #7CBC00;
+    }
+    li:nth-of-type(4) p {
+        background: #1d5af3;
+    }
+    li:nth-of-type(5) p {
+        background: #ff4100;
+    }
+    li:nth-of-type(6) p {
+        background: #f56e31;
+    }
+    li:nth-of-type(7) p {
+        background: #d33c28;
+    }
+    li:nth-of-type(8) p {
+        background: #1d5af3;
+    }
+    li:nth-of-type(9) p {
+        background: #e35993;
+    }
+    li:nth-of-type(10) p {
+        background: #44b39c;
+    }
+    li:nth-of-type(11) p {
+        background: #1d5af3;
+    }
+    li:nth-of-type(12) p {
+        background: #e35993;
+    }
+    li:nth-of-type(13) p {
+        background: #ff7400;
+    }
+    li:nth-of-type(14) p {
+        background: #483a82;
+    }
+    li:hover p {
+        transform: rotate(360deg) scale(1.5);
+        z-index: 5;
+    }
+</style>
+<body>
+<div>
+    <ul>
+        <li><p title="JavaScript">JS</p></li>
+        <li><p>Java</p></li>
+        <li><p title="Python">PY</p></li>
+        <li><p>Ruby</p></li>
+        <li><p>PHP</p></li>
+        <li><p>C++</p></li>
+        <li><p>C#</p></li>
+        <li><p>GO</p></li>
+        <li><p>Shell</p></li>
+        <li><p>CSS</p></li>
+        <li><p>C</p></li>
+        <li><p title="Objective C">OBJ-C</p></li>
+        <li><p>Scala</p></li>
+        <li><p>Swift</p></li>
+    </ul>
+</div>
+</body>
+</html>
