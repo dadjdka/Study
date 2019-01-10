@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    span {
+        background: linear-gradient(to right, red, blue, yellow);
+        /*text背景裁剪到文字*/
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    h1 {
+        position: relative;
+        top: 10px;
+        left: 50px;
+        color: yellow;
+    }
+    h1:before {
+        content: attr(text);
+        position: absolute;
+        z-index: 10;
+        color: pink;
+        mask: linear-gradient(to left, red, transparent);
+    }
+</style>
+<body>
+<span>一个简单的渐变测试</span>
+<h1 text="简单测试00">第二个简单文字渐变测试</h1>
+</body>
+</html>
