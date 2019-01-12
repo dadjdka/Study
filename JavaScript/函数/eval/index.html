@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    var geval = eval;
+    var x = "good", y = "goo"
+    function f() {
+        var x = "look"
+        eval("x += 'changed';" )
+        return x  //返回更改后的值，全局变量x未改变
+    }
+    function g() {
+        var y = "look"
+        geval("y += 'changed';")
+        return y;   // 返回没有更改的值 全局变量y改变
+    }
+    // alert(eval("3+3"))
+    console.log(f(), x)
+    console.log(g(), y)
+</script>
+<body>
+
+</body>
+</html>
