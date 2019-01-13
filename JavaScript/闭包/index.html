@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+//  for (i=0;i<5;i++) {
+//      setTimeout(function () {
+//         console.log(i)
+//     },100)
+// }
+
+//     var num = 15;
+//     var z=function f(x) {
+//      if (x>num){
+//          console.log(x);
+//      }
+//     }
+//     void function (x) {
+//        var num = 30;
+//        x(30)
+//     }(z)
+
+    function f() {
+        var a=1;
+        return function () {
+            alert(a)
+        }
+    }
+    var t=f()
+    t()
+</script>
+<body>
+
+</body>
+</html>
